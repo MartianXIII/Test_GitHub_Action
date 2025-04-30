@@ -1,13 +1,16 @@
 name: 'Generic JS GitHub Action'
 description: 'We'll see when we get there'
+
 inputs:
   name:
     description: 'Name to greet'
     required: true
     default: 'Mars'
+
 outputs:
   time:
     description: ' The current time'
+    
 runs:
   using: 'node16'
   main: 'index.js'
