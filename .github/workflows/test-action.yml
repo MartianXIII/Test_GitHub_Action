@@ -14,6 +14,6 @@ jobs:
         uses: actions/checkout@v3
 
       - name: Run my local JS GitHub Action
-        uses: ./  # assumes your action.yml is in the root
+        uses: ./test-js-action  # assumes your action.yml is in the root
         with:
           name: Mister Mars
