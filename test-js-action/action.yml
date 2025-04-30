@@ -1,5 +1,5 @@
 name: 'Generic JS GitHub Action'
-description: 'We'll see when we get there'
+description: 'We will see when we get there'
 
 inputs:
   name:
@@ -9,8 +9,8 @@ inputs:
 
 outputs:
   time:
-    description: ' The current time'
-    
+    description: 'The current time'
+
 runs:
   using: 'node16'
   main: 'index.js'
