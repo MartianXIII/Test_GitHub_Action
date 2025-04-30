@@ -1,16 +1,19 @@
-name: WIP action
+name: Test My JS Action
 
 on:
   push:
-    paths:
-      - 'test-js-action/**'
+    branches: [master]
+  pull_request:
+    branches: [master]
 
 jobs:
-  test:
+  test-action:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-      - name: Use action
-        uses: ./test-js-action
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Run my local JS GitHub Action
+        uses: ./  # assumes your action.yml is in the root
         with:
           name: Mister Mars
