@@ -1,6 +1,11 @@
+name: Test Custom JS Action
+
+on: [push]
+
 jobs:
   test-action:
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
@@ -12,4 +17,9 @@ jobs:
           name: Mister Mars
 
       - name: Validate output
-        run: echo "🕒 Time output from action: ${{ steps.greet.outputs.time }}"
+        run: |
+          echo "🕒 Time output from action: ${{ steps.greet.outputs.time }}"
+          if [ -z "${{ steps.greet.outputs.time }}" ]; then
+            echo "❌ No time output!"
+            exit 1
+          fi
