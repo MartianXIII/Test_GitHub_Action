@@ -1,0 +1,16 @@
+name: WIP action
+
+on:
+  push:
+    paths:
+      - 'test-js-action/**'
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Use action
+        uses: ./test-js-action
+        with:
+          name: Mister Mars
