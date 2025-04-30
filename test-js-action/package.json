@@ -1,5 +1,5 @@
 {
-    "name": "Test_GitHub_Action",
+    "name": "test-js-action",
     "version": "1.0.0",
     "main": "index.js",
     "scripts": {
@@ -8,4 +8,4 @@
     "dependencies": {
       "@actions/core": "^1.10.0"
     }
-  }
+}
